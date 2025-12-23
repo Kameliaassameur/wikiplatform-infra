@@ -54,3 +54,15 @@ resource "aws_security_group" "web_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+resource "aws_instance" "wikiplatform" {
+  ami           = "ami-053b0d53c279acc90" # Ubuntu 22.04 (us-east-1)
+  instance_type = "t2.medium"
+
+  vpc_security_group_ids = [
+    aws_security_group.web_sg.id
+  ]
+
+  tags = {
+    Name = "wikiplatform-ec2"
+  }
+}
