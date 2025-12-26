@@ -15,7 +15,7 @@ resource "aws_instance" "wikiplatform" {
   ami           = "ami-0fc5d935ebf8bc3bc"
   instance_type = "t2.medium"
 
-  key_name = "wikiplatform-key"
+  key_name = "kamelia-ssh"
 
   vpc_security_group_ids = [
     aws_security_group.web_sg.id
