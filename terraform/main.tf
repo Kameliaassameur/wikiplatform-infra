@@ -13,7 +13,7 @@ provider "aws" {
 
 resource "aws_instance" "wikiplatform" {
   ami           = "ami-0fc5d935ebf8bc3bc"
-  instance_type = "t2.medium"
+  instance_type = "t3.micro"
 
   key_name = "wikiplatform-key"
 
